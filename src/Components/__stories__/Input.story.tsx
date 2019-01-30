@@ -9,6 +9,8 @@ import Button from "../Buttons/Inverted"
 import { Checkbox } from "../Checkbox"
 import Icon from "../Icon"
 import Input from "../Input"
+import PaletteInput from "../Input-palette"
+
 import TextArea from "../TextArea"
 
 const Title = styled.h1`
@@ -26,10 +28,23 @@ storiesOf("Components/Input", module)
 
       <section style={{ padding: 10 }}>
         <Input placeholder="Placeholder" title="Title" block />
+        <PaletteInput placeholder="Placeholder" title="Title (Palette)" block />
 
         <Input placeholder="Placeholder" title="Title" value="Content" block />
+        <PaletteInput
+          placeholder="Placeholder"
+          title="Title (Palette)"
+          value="Content"
+          block
+        />
 
         <Input title="Title" placeholder="Placeholder" block disabled />
+        <PaletteInput
+          title="Title (Palette)"
+          placeholder="Placeholder"
+          block
+          disabled
+        />
       </section>
     </div>
   ))
@@ -45,10 +60,23 @@ storiesOf("Components/Input", module)
           description="Short description"
           block
         />
+        <PaletteInput
+          placeholder="Placeholder"
+          title="Title (palette)"
+          description="Short description"
+          block
+        />
 
         <Input
           placeholder="Placeholder"
           title="Title"
+          description="Short description"
+          value="Content"
+          block
+        />
+        <PaletteInput
+          placeholder="Placeholder"
+          title="Title (palette)"
           description="Short description"
           value="Content"
           block
@@ -74,10 +102,24 @@ storiesOf("Components/Input", module)
               error={on ? "There was a problem" : null}
               block
             />
+            <PaletteInput
+              placeholder="Placeholder"
+              title="Title (palette)"
+              error={on ? "There was a problem" : null}
+              block
+            />
 
             <Input
               placeholder="Placeholder"
               title="Title"
+              description="Short description"
+              error={on ? "There was a problem" : null}
+              value="Content"
+              block
+            />
+            <PaletteInput
+              placeholder="Placeholder"
+              title="Title (palette)"
               description="Short description"
               error={on ? "There was a problem" : null}
               value="Content"
@@ -100,10 +142,25 @@ storiesOf("Components/Input", module)
           block
           quick
         />
+        <PaletteInput
+          placeholder="Enter your email address"
+          label="Email"
+          block
+          quick
+        />
+
         <Input
           type="password"
           placeholder="Enter your password"
           label="Password"
+          rightView={<Icon name="search" color={colors.graySemibold} />}
+          block
+          quick
+        />
+        <PaletteInput
+          type="password"
+          placeholder="Enter your password"
+          label="Password (palette)"
           rightView={<Icon name="search" color={colors.graySemibold} />}
           block
           quick

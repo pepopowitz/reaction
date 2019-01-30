@@ -3,7 +3,31 @@ import { garamond } from "Assets/Fonts"
 import { css } from "styled-components"
 import { InputProps } from "./Input"
 
+// Should this move to palette?
 export const borderedInput = (props: InputProps & BorderProps = {}) => {
+  return css`
+    padding: 10px;
+    box-shadow: none;
+    transition: border-color 0.25s;
+    margin-right: 10px;
+    resize: none;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &::placeholder {
+      color: ${colors.grayMedium};
+      text-overflow: ellipsis;
+      line-height: normal;
+    }
+
+    ${garamond("s17")};
+    ${border(props)};
+  `
+}
+
+export const borderedInputPalette = (props: InputProps & BorderProps = {}) => {
   return css`
     padding: 10px;
     box-shadow: none;

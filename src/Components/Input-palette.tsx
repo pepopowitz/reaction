@@ -6,7 +6,7 @@ import { garamond, unica } from "Assets/Fonts"
 import React from "react"
 import styled from "styled-components"
 import { block } from "./Helpers"
-import { borderedInput } from "./Mixins"
+import { borderedInputPalette as borderedInput } from "./Mixins"
 
 // import { themeGet } from "styled-system"
 
